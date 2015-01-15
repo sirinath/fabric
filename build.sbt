@@ -37,18 +37,6 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  Orgs.akka %% Art.Akka.actor % Ver.akka,
-  Orgs.akka %% Art.Akka.agent % Ver.akka,
-  Orgs.akka %% Art.Akka.cluster % Ver.akka,
-  Orgs.akka %% Art.Akka.kernel % Ver.akka,
-  Orgs.akka %% Art.Akka.osgi % Ver.akka,
-  Orgs.akka %% Art.Akka.remote % Ver.akka,
-  Orgs.akka %% Art.Akka.slf4j % Ver.akka,
-  Orgs.akka %% Art.Akka.camel % Ver.akka,
-  Orgs.akka %% Art.Akka.testkit % Ver.akka,
-  Orgs.akka %% Art.Akka.stream % Ver.akkaStream,
-  Orgs.akka %% Art.Akka.http % Ver.akkaHttp,
-  Orgs.akka %% Art.Akka.httpCore % Ver.akkaHttp,
   Orgs.scalaz %% "scalaz-core" % Ver.scalaz,
   Orgs.scalazStream %% "scalaz-stream" % Ver.scalazStream,
   Orgs.shapeless %% "shapeless" % Ver.shapeless,

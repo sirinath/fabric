@@ -11,9 +11,6 @@
 
 
 object Ver {
-  lazy val akka = "2.3.8"
-  lazy val akkaStream = "1.0-M2"
-  lazy val akkaHttp = "1.0-M2"
   lazy val parboiled = "2.0.1"
   lazy val scalaz = "7.1.0"
   lazy val scalazStream = "0.6a"
@@ -24,7 +21,6 @@ object Ver {
 }
 
 object Orgs {
-  lazy val akka = "com.typesafe.akka"
   lazy val scala = "org.scala-lang"
   lazy val parboiled = "org.parboiled"
   lazy val scalaz = "org.scalaz"
@@ -36,40 +32,42 @@ object Orgs {
 
 object Art {
 
-  object Akka {
-    implicit val akka = "akka"
-
-    def !(s: String): String = Akka(s)
+  class Base {
+    def v(s: String): String = apply(s)
 
     def apply(s2: String)(implicit s1: String): String = s1 + "-" + s2
 
-    def !(s1: String, s2: String): String = Akka(s1, s2)
+    def v(s1: String, s2: String): String = apply(s1, s2)
 
     def apply(s2: String, s3: String)(implicit s1: String): String = s1 + "-" + s2 + "-" + s3
+  }
 
-    def actor: String = !"actor"
+  object Akka extends Base {
+    implicit val akka = "akka"
 
-    def agent: String = !"agent"
+    def actor: String = v("actor")
 
-    def cluster: String = !"cluster"
+    def agent: String = v("agent")
 
-    def kernel: String = !"kernel"
+    def cluster: String = v("cluster")
 
-    def osgi: String = !"osgi"
+    def kernel: String = v("kernel")
 
-    def remote: String = !"remote"
+    def osgi: String = v("osgi")
 
-    def slf4j: String = !"slf4j"
+    def remote: String = v("remote")
 
-    def camel: String = !"camel"
+    def slf4j: String = v("slf4j")
 
-    def testkit: String = !"testkit"
+    def camel: String = v("camel")
 
-    def stream: String = !("stream", "experimental")
+    def testkit: String = v("testkit")
 
-    def http: String = !("http", "experimental")
+    def stream: String = v("stream", "experimental")
 
-    def httpCore: String = !("http-core", "experimental")
+    def http: String = v("http", "experimental")
+
+    def httpCore: String = v("http-core", "experimental")
   }
 
 }
