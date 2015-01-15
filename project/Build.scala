@@ -31,7 +31,6 @@ object Orgs {
 }
 
 object Art {
-
   class Base {
     def v(s: String): String = apply(s)
 
@@ -41,33 +40,4 @@ object Art {
 
     def apply(s2: String, s3: String)(implicit s1: String): String = s1 + "-" + s2 + "-" + s3
   }
-
-  object Akka extends Base {
-    implicit val akka = "akka"
-
-    def actor: String = v("actor")
-
-    def agent: String = v("agent")
-
-    def cluster: String = v("cluster")
-
-    def kernel: String = v("kernel")
-
-    def osgi: String = v("osgi")
-
-    def remote: String = v("remote")
-
-    def slf4j: String = v("slf4j")
-
-    def camel: String = v("camel")
-
-    def testkit: String = v("testkit")
-
-    def stream: String = v("stream", "experimental")
-
-    def http: String = v("http", "experimental")
-
-    def httpCore: String = v("http-core", "experimental")
-  }
-
 }
