@@ -31,13 +31,5 @@ object Orgs {
 }
 
 object Art {
-  class Base {
-    def v(s: String): String = apply(s)
 
-    def apply(s2: String)(implicit s1: String): String = s1 + "-" + s2
-
-    def v(s1: String, s2: String): String = apply(s1, s2)
-
-    def apply(s2: String, s3: String)(implicit s1: String): String = s1 + "-" + s2 + "-" + s3
-  }
 }
