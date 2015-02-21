@@ -23,24 +23,24 @@ scalaVersion := "2.11.4"
 autoCompilerPlugins := true
 
 resolvers ++= Seq(
+  DefaultMavenRepository,
+  Resolver.jcenterRepo,
+  Resolver.sonatypeRepo("releases"),
+  Resolver.sonatypeRepo("snapshots"),
+  Resolver.sonatypeRepo("releases"),
   Resolver.typesafeRepo("releases"),
   Resolver.typesafeRepo("snapshots"),
   Resolver.sbtPluginRepo("releases"),
   Resolver.sbtPluginRepo("snapshots"),
-  Resolver.sonatypeRepo("releases"),
-  Resolver.sonatypeRepo("snapshots"),
-  Resolver.sonatypeRepo("releases"),
-  Resolver.jcenterRepo,
-  DefaultMavenRepository,
   "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/",
   "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases"
 )
 
 libraryDependencies ++= Seq(
-  Orgs.scalaz %% "scalaz-core" % Ver.scalaz,
-  Orgs.scalazStream %% "scalaz-stream" % Ver.scalazStream,
-  Orgs.shapeless %% "shapeless" % Ver.shapeless,
-  Orgs.spire %% "spire" % Ver.spire,
-  Orgs.spire %% "jawn-ast" % Ver.jawn,
-  Orgs.squants %% "squants" % Ver.squants
+  "com.typesafe.akka" %% "akka-stream-experimental" % "1.0-M2",
+  "com.softwaremill.macwire" %% "macros" % "0.8.0",
+  "com.softwaremill.macwire" %% "runtime" % "0.8.0",
+  "org.scalaz" %% "scalaz-core" % "7.1.0",
+  "com.squants" %% "squants" % "0.4.2",
+  "com.github.rssh" %% "scala-gopher" % "0.99.5"
 )

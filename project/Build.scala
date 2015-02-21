@@ -9,27 +9,3 @@
  * Any contribution to the project should comply with terms in all of the above licenses.
  */
 
-
-object Ver {
-  lazy val parboiled = "2.0.1"
-  lazy val scalaz = "7.1.0"
-  lazy val scalazStream = "0.6a"
-  lazy val shapeless = "2.0.0"
-  lazy val spire = "0.9.0"
-  lazy val jawn = "0.7.2"
-  lazy val squants = "0.4.2"
-}
-
-object Orgs {
-  lazy val scala = "org.scala-lang"
-  lazy val parboiled = "org.parboiled"
-  lazy val scalaz = "org.scalaz"
-  lazy val scalazStream = scalaz + ".stream"
-  lazy val shapeless = "com.chuusai"
-  lazy val spire = "org.spire-math"
-  lazy val squants = "com.squants"
-}
-
-object Art {
-
-}
